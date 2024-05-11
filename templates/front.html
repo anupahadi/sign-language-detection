@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capture</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" href="/static/css/bootstrap.css">
+    
+
+</head>
+<body>
+    <div class="background-image1">
+  
+    <div class="container">
+   <div class="text-center ">
+            <h1 class="ani">
+                Capture
+            </h1>
+			<form method="post" action="{{ url_for('tasks') }}">
+
+			<button class="button-3" type="submit" value="Stop/Start" name="stop" >Stop/Start</button>
+            <button class="button-3" type="submit" value="Capture" name="click" >Capture</button>
+			<button class="button-3" type="submit" value="Start/Stop Recording" name="rec" >Start/Stop Recording</button>
+			<button class="button-3" type="submit" value="process" name="change" >Process</button>
+            
+			</form>
+            <div class="pt-3">
+            <img src="{{ url_for('video_feed') }}" height="80%">
+             </div>
+            <div class="text-center">
+    
+           <form action="/logic" method="get">
+            <div class="pt-5">
+            <button class="button-3" type="submit"> submit </button>
+             </div>
+        </form>
+        </div>
+      </div>
+    </div>
+    </div>
+</body>
+</html>
